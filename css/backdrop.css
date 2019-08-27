@@ -1,0 +1,146 @@
+@keyframes flip {
+    0%       { transform: rotate3d( 0.5, 0.866, 0,  90deg); 
+               opacity: 0;}
+   100%       { transform: rotate3d(-0.5, 0.866, 0,   0deg);  opacity: 1;}
+  
+ }
+ 
+ .folding-hex {
+   height: 399.28px;
+   width: 400px;
+   position: relative;
+   margin: 0 auto;
+   top:20%;
+   transform-origin: 0 0;
+   transform: translateX(40px) rotate(0deg); }
+ 
+ .rotator {
+     transform-origin: 20px 37.64px;
+ 
+ }
+ .rotator:nth-child(1) {
+     transform: rotate(180deg); 
+
+ }
+ .rotator:nth-child(2) {
+     transform: rotate(60deg); 
+ }
+ .rotator:nth-child(3) {
+     transform: rotate(120deg); 
+     top: 10%;
+     left:100px ;
+ }
+ .rotator:nth-child(4) {
+     transform: rotate(0deg); 
+     
+ }
+ .rotator:nth-child(5) {
+     transform: rotate(240deg); 
+ }
+ .rotator:nth-child(6) {
+     transform: rotate(300deg); 
+ }
+   
+ .triangle {
+     position: absolute;
+     width: 0;
+     height: 0;
+     border-style: solid;
+     border-width: 69.3px 40px 0 40px; ;
+     /*transform-origin: 20px 37.64px*/;
+     border-color: #E50C4E transparent; 
+     animation: flip 1.5s linear ;
+     opacity: 0;
+     animation-fill-mode: forwards;
+     
+ }
+ 
+ .rotator:nth-child(1) .triangle {
+    border-color:  #3D2D78 transparent; 
+    opacity: 0;
+    top: -65px;
+    left:3px ;
+}
+ .rotator:nth-child(2) .triangle {
+     border-color: #DE6E26 transparent; 
+     animation-delay: 2.0s;
+     opacity: 0;
+     left:-2px;
+     top: 5px;
+ }
+ .rotator:nth-child(3) .triangle {
+     border-color: #D43E26 transparent; 
+     animation-delay: 1s;
+     opacity: 0;
+     top: -29px;
+     left:20px ;
+ }
+ .rotator:nth-child(4) .triangle {
+     
+     top: 140.8px;
+     border-color: #632975 transparent; 
+     opacity: 0;
+     left:-42px;
+ }
+ 
+ .rotator:nth-child(5) .triangle {
+     border-color: #146A83 transparent; 
+     animation-delay: 1.0s;
+     opacity: 0;
+     left:-37.7px;
+     bottom:0px;
+ }
+ .rotator:nth-child(6) .triangle {
+     border-color: #15848B transparent; 
+     animation-delay: 2.0s;
+     opacity: 0;
+     left:-62px;
+     top: -35px;
+ }
+
+ .rotator:nth-child(8) .triangle {
+    border-color: #EE9922  transparent; 
+    animation-delay: 3s;
+    left: 37px;
+    opacity: 0;
+    top:2px;
+}
+
+.rotator:nth-child(7) .triangle {
+    border-color: #2DA292 transparent; 
+    animation-delay: 3s;
+    left: -124px;
+    opacity: 0;
+    top:4px;
+}
+.triangle::after{
+    opacity: 1;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+/*Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+ {
+    .folding-hex{
+        left:150px;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+{
+    .folding-hex{
+        left:150px;
+    }
+} 
